@@ -1,0 +1,7 @@
+{
+  "name": "menuinferior",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
