@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ubicacion del Medico</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab4">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <google-map class="mapa" height="100%" width="100%" [center]="center">
+    <map-marker [position]="medico.position" [label]="medico.nombre">      
+    </map-marker>
+  </google-map> 
+</ion-content>

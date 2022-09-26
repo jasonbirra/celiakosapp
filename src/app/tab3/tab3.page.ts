@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  characters=[]
 
-  constructor() {}
+  constructor(
+    private http:HttpClient
+  ) { }
+
+  ngOnInit() {
+    this.http.get<any>('https://apiceliakos.fly.dev/restaurantes')
+    .subscribe(res=>{
+      console.log(res);
+      //this.characters=res.results;
+      this.characters=res.resto.restos;
+      //this.characters=res;
+    });
+  }
 
 }

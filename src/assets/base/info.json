@@ -1,0 +1,35 @@
+{
+    "info":[
+        {
+            "titulo_info":"Que es la Celiaquia",
+            "area_info":"Salud",
+            "describe_info":"",            
+            "imagen_info":"informacion.jpg"
+        },{
+            "titulo_info":"Que es la Contaminacion Cruzada",
+            "area_info":"Salud",
+            "describe_info":"",                        
+            "imagen_info":"informacion.jpg"
+        },{
+            "titulo_info":"Cuidados en el Lavado de Loza",
+            "area_info":"Hogar",
+            "describe_info":"",            
+            "imagen_info":"informacion.jpg"
+        },{
+            "titulo_info":"No salgo a comer afuera",
+            "area_info":"Sociedad",
+            "describe_info":"",            
+            "imagen_info":"informaicion.jpg"
+        },{
+            "titulo_info":"Debo cuidar solo la alimentacion?",
+            "area_info":"Salud",
+            "describe_info":"",            
+            "imagen_info":"informaicion.jpg"
+        },{
+            "titulo_info":"Cuidados para niños Celiacos",
+            "area_info":"Salud",
+            "describe_info":"",            
+            "imagen_info":"informacion.jpg"
+        }
+    ]
+}

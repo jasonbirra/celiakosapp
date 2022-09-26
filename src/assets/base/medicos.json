@@ -1,0 +1,65 @@
+{
+    "medicos":[
+        {
+            "id":1,
+            "nombre_medico":"Jose Celis Varas",
+            "edad_medico":45,
+            "sexo":"Masculino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],  
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",       
+            "imagen_medico":"doctor_man.jpg"
+        },{
+            "id":2,
+            "nombre_medico":"Maria Loreto Andrade",
+            "edad_medico":30,
+            "sexo":"Femenino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",  
+            "imagen_medico":"doctor_woman.jpg"
+        },{
+            "id":3,
+            "nombre_medico":"Juan Angel Rodriguez",
+            "edad_medico":53,
+            "sexo":"Masculino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",  
+            "imagen_medico":"doctor_man.jpg"
+        },{
+            "id":4,
+            "nombre_medico":"Angelica Ordenes Urrutia",
+            "edad_medico":28,
+            "sexo":"Femenino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",  
+            "imagen_medico":"doctor_woman.jpg"
+        },{
+            "id":5,
+            "nombre_medico":"Jorge Andres Segovia",
+            "edad_medico":35,
+            "sexo":"Masculino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",  
+            "imagen_medico":"doctor_man.jpg"
+        },{
+            "id":6,
+            "nombre_medico":"Maria Soledad Garrido",
+            "edad_medico":56,
+            "sexo":"Femenino",
+            "especialidad_medico":"Cirujano",
+            "sistema_salud":["Fonasa","Isapre","Particular"],
+            "fono_medico":"56 9 12345678",  
+            "mail_medico":"medico@medico.com",  
+            "imagen_medico":"doctor_woman.jpg"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle Medico</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab4">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf ="character" >
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <img  src="http://todo-salud.net/wp-content/uploads/2014/01/medico1.jpg" width="200px"  alt="">
+              <ion-card-title>
+                {{character.res.nombre_medico}}
+              </ion-card-title>
+              <p>{{character.res.mail_medico}}</p>  
+              <p>{{character.res.especialidad_medico}}</p>  
+              <p>{{character.res.lat_medico}}</p> 
+              <p>{{character.res.lng_medico}}</p> 
+              <!--ion-button (click)="mapmedico">Ubicacion Medico</ion-button--> 
+              <ion-button [routerLink]="['../../mapmedico/' + character.res.lat_medico +'/'+ character.res.lng_medico]">Cargar Maps</ion-button>
+            </ion-card-content>                      
+          </ion-card>                             
+        </div>
+      </ion-col>
+    </ion-row>   
+  </ion-grid>  
+</ion-content>

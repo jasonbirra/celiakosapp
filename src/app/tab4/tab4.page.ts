@@ -4,11 +4,11 @@ import {Router} from '@angular/router'
 import {map} from 'rxjs/operators'
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-tab4',
+  templateUrl: './tab4.page.html',
+  styleUrls: ['./tab4.page.scss'],
 })
-export class Tab2Page implements OnInit {
+export class Tab4Page implements OnInit {
 
   characters=[]
 
@@ -17,11 +17,12 @@ export class Tab2Page implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('https://jsonplaceholder.typicode.com/comments')
+    this.http.get<any>('https://apiceliakos.fly.dev/medicos')
     .subscribe(res=>{
       console.log(res);
-      //this.characters=res.results;
-      this.characters=res;
+      this.characters=res.medicos.medicos;
+      //this.characters= Object.entries(res.medicos.medicos);
+      //console.log(this.characters)
     });
   }
 

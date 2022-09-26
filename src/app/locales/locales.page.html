@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Food Detalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab4">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf ="character" >
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <img  src="https://thumbs.dreamstime.com/b/logotipo-del-chef-s%C3%ADmbolo-de-comida-restaurante-cocina-feliz-194682940.jpg" width="200px"  alt="">
+              <ion-card-title>
+                {{character.res.nombre_resto}}
+              </ion-card-title>
+              <p>{{character.res.direccion_resto}}</p>  
+              <p>{{character.res.ciudad_resto}}</p>  
+              <p>{{character.res.descripcion_resto}}</p> 
+              <p>Fono: +{{character.res.fono_resto}}</p>  
+              <p>Email: {{character.res.mail_resto}}</p>                                       
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
