@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient} from '@angular/common/http'
-import {map} from 'rxjs/operators'
+
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.page.html',
   styleUrls: ['./info.page.scss'],
 })
-export class InfoPage implements OnInit {
+export class InfoPage implements OnInit { 
 
   infoId: string;
   character
@@ -21,10 +21,8 @@ export class InfoPage implements OnInit {
 
   ngOnInit() {    
     this.infoId=this.activatedRoute.snapshot.paramMap.get('id')  
-    this.http.get('https://jsonplaceholder.typicode.com/comments/' + this.infoId) 
-    .subscribe(res => this.character = res);      
-
-    
+    this.http.get('https://apiceliakos.fly.dev/info/' + this.infoId)    
+    .subscribe(res=> {this.character = res
+      console.log(res)});
   }
-
 }

@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Food Detalle</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="tabs/tab4">
+      <ion-back-button defaultHref="tabs/tab3">
       </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
@@ -23,7 +23,8 @@
               <p>{{character.res.ciudad_resto}}</p>  
               <p>{{character.res.descripcion_resto}}</p> 
               <p>Fono: +{{character.res.fono_resto}}</p>  
-              <p>Email: {{character.res.mail_resto}}</p>                                       
+              <p>Email: {{character.res.mail_resto}}</p>   
+              <ion-button [routerLink]="['../../maplocal/' + character.res.lat_resto +'/'+ character.res.lng_resto]">Cargar Maps</ion-button>                                    
             </ion-card-content>
           </ion-card>
         </div>

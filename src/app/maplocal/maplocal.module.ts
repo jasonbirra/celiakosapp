@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LocalesPageRoutingModule } from './locales-routing.module';
+import { MaplocalPageRoutingModule } from './maplocal-routing.module';
 
-import { LocalesPage } from './locales.page';
+import { MaplocalPage } from './maplocal.page';
 import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
@@ -15,8 +15,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     FormsModule,
     GoogleMapsModule,
     IonicModule,
-    LocalesPageRoutingModule
+    MaplocalPageRoutingModule
   ],
-  declarations: [LocalesPage]
+  declarations: [MaplocalPage]
 })
-export class LocalesPageModule {}
+export class MaplocalPageModule {}

@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'mapmedico/:lat/:lng',
     loadChildren: () => import('./mapmedico/mapmedico.module').then( m => m.MapmedicoPageModule)
+  },
+  {
+    path: 'maplocal/:lat/:lng',
+    loadChildren: () => import('./maplocal/maplocal.module').then( m => m.MaplocalPageModule)
   }
 ];
 @NgModule({

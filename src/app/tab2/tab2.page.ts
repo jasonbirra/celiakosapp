@@ -17,11 +17,12 @@ export class Tab2Page implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('https://jsonplaceholder.typicode.com/comments')
+    this.http.get<any>('https://apiceliakos.fly.dev/infos')
     .subscribe(res=>{
       console.log(res);
+      this.characters=res.info.informaciones;
       //this.characters=res.results;
-      this.characters=res;
+      //this.characters=res;
     });
   }
 
