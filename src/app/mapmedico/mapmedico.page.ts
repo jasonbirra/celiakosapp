@@ -55,7 +55,7 @@ export class MapmedicoPage implements OnInit {
      
     this.medico.position.lat = Number.parseFloat(this.activatedRoute.snapshot.paramMap.get('lat'));
     this.medico.position.lng = Number.parseFloat(this.activatedRoute.snapshot.paramMap.get('lng'));
-    this.medico.nombre ="DR House";   
+    this.medico.nombre =(this.activatedRoute.snapshot.paramMap.get('nombre'));   
     
     
 

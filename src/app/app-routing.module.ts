@@ -23,12 +23,20 @@ const routes: Routes = [
     loadChildren: () => import('./locales/locales.module').then( m => m.LocalesPageModule)
   },
   {
-    path: 'mapmedico/:lat/:lng',
+    path: 'mapmedico/:lat/:lng/:nombre',
     loadChildren: () => import('./mapmedico/mapmedico.module').then( m => m.MapmedicoPageModule)
   },
   {
-    path: 'maplocal/:lat/:lng',
+    path: 'maplocal/:lat/:lng/:nombre',
     loadChildren: () => import('./maplocal/maplocal.module').then( m => m.MaplocalPageModule)
+  },
+  {
+    path: 'tienda/:id',
+    loadChildren: () => import('./tienda/tienda.module').then( m => m.TiendaPageModule)
+  },
+  {
+    path: 'maptienda/:lat/:lng/:nombre',
+    loadChildren: () => import('./maptienda/maptienda.module').then( m => m.MaptiendaPageModule)
   }
 ];
 @NgModule({

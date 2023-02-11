@@ -14,4 +14,12 @@ export class Tab1Page {
 
   constructor() {}
 
+  option={
+    slidesPerview: 1.5,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+    //autoPlay: true,
+  }
+
 }

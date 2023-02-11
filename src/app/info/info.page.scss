@@ -1,0 +1,25 @@
+ion-content{
+   
+}
+
+ion-toolbar{    
+    --ion-background-color: #241dc5;
+    color: azure;  
+}
+
+ion-card{
+    
+    color: rgb(11, 11, 11);
+    border: 3px white solid;
+}
+
+ion-card-title{
+    color: rgb(4, 4, 4);
+}
+
+.item-avatar  {
+    width:50% !important;  
+    height : 50% !important;  
+    max-width: 80px !important;  //any size
+    max-height: 80px !important; //any size 
+}  

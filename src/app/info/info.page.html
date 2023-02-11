@@ -8,23 +8,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid >
-    <ion-row>
-      <ion-col sizeMd="4" offsetMd="4">
+<ion-content>  
         <div *ngIf ="character" >
           <ion-card>
             <ion-card-content class="ion-text-center">
-              <img  src="https://img.freepik.com/vector-premium/linda-ilustracion-medico-dibujos-animados-estilo-handrawn_53734-77.jpg" width="200px"  alt="">
+              
               <ion-card-title>
                 {{character.res.titulo_info}}
               </ion-card-title>
-              <p>{{character.res.seccion_info}}</p>  
-              <p>{{character.res.detalle_info}}</p>             
+              <p>{{character.res.seccion_info}}</p><br>  
+              <p>{{character.res.detalle_info}}</p><br>             
             </ion-card-content>
           </ion-card>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        </div>      
 </ion-content>

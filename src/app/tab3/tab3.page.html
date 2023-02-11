@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Info-Foods
+      Foods-CeliakOS
     </ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tabs/tab1">            
@@ -10,19 +10,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>  
+<ion-content>
+  <ion-card class="medicos-principal">    
+        <img  class="imagen" src="..\..\assets\iconos\comida.png" />
+    <ion-card-header>       
+      <ion-card-title>¿Buscas donde comer? </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Aqui podras encontrar Locales y Restaurantes dirigidos para Celiacos, buscalo y revisa su ubicación....
+    </ion-card-content>
+  </ion-card>   
   <ion-grid>
    <ion-row>
      <ion-col sizeMd="4" offsetMd="4">
        <ion-list>        
          <ion-item *ngFor="let character of characters" [routerLink]="['../../locales/' + character.id]">
              <ion-avatar class="item-avatar" slot="start">
-               <img class="avatar" src="https://thumbs.dreamstime.com/b/logotipo-del-chef-s%C3%ADmbolo-de-comida-restaurante-cocina-feliz-194682940.jpg" alt="">
-             </ion-avatar>
+               <img class="avatar" src="..\..\assets\iconos\icono_comida.png" alt="">
+             </ion-avatar>             
              <ion-label>
-              <h2>{{character.nombre_resto}}</h2>
+              <h4>{{character.nombre_resto}}</h4>
               <p>{{character.descripcion_resto}}</p>
-             </ion-label>             
+             </ion-label>          
+                      
            </ion-item>
          </ion-list>  
      </ion-col>

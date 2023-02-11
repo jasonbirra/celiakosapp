@@ -1,10 +1,47 @@
-.especialidad{
-    font-size: 15px;
+ion-toolbar{    
+    --ion-background-color: #241dc5;
+    color: azure;  
 }
 
+
+ion-card.medicos-principal{     
+    margin-left: 20px;
+    width: 90%;
+    height: 50%;    
+    font-size: 10px;
+    align-items: center;        
+    
+}
+
+ion-item{
+    display: block;
+    font-size: 13px;
+    font-style:normal;
+}
+
+
+ion-label{
+    display: block;
+}
+
+
+.imagen{
+    margin-top: 100px;   
+    object-fit: cover;      
+    width: 95%;
+    height: 60%;   
+    text-align: center; 
+    position:absolute; 
+   
+    border-radius: 40px 40px 0px 0px ;  
+
+}
+
+
+
 .item-avatar  {
-    width:100% !important;  
-    height : 100% !important;  
+    width:50px !important;  
+    height : 50px !important;  
     max-width: 100px !important;  //any size
     max-height: 100px !important; //any size 
-}   
+} 

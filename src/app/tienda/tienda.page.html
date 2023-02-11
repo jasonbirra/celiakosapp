@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Markets Gluten Free</ion-title><ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab5">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf ="character" >
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <img  src="https://img.freepik.com/vector-gratis/carro-tienda-edificio-tienda-dibujos-animados_138676-2085.jpg?w=2000" width="200px"  alt="">
+              <ion-card-title>
+                {{character.res.nombre_tienda}}
+              </ion-card-title>
+              <p>{{character.res.direccion_tienda}}</p>  
+              <p>{{character.res.ciudad_tienda}}</p>  
+              <p>{{character.res.descripcion_tienda}}</p> 
+              <p>Fono: +{{character.res.fono_tienda}}</p>  
+              <p>Email: {{character.res.mail_tienda}}</p>   
+              <ion-button fill="outline"  [routerLink]="['../../maptienda/' + character.res.lat_tienda +'/'+ character.res.lng_tienda +'/'+ character.res.nombre_tienda]">
+                <ion-icon slot="end" name="earth"></ion-icon>
+                Ubicación en Maps
+              </ion-button>                                    
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

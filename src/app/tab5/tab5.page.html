@@ -10,12 +10,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 5</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 5 page"></app-explore-container>
+<ion-content>  
+  <ion-card class="medicos-principal">
+    <img  class="imagen" src="..\..\assets\iconos\market.png" />
+    <ion-card-header>      
+      <ion-card-title>¿Donde comprar tus productos?</ion-card-title>      
+    </ion-card-header>
+    <ion-card-content>
+      Aqui podras encontrar distintos markets para celiacos, buscalos y revisa su ubicación....
+    </ion-card-content>
+  </ion-card> 
+  <ion-grid>
+   <ion-row>
+     <ion-col sizeMd="4" offsetMd="4">
+       <ion-list>        
+         <ion-item *ngFor="let character of characters" [routerLink]="['../../tienda/' + character.id]">
+             <ion-avatar class="item-avatar" slot="start">
+               <img class="avatar" src="..\..\assets\iconos\icono_market.png"  alt="">
+             </ion-avatar>
+             <ion-label>
+              <h4>{{character.nombre_tienda}}</h4>
+              <p>{{character.descripcion_tienda}}</p> 
+             </ion-label>                        
+           </ion-item>
+         </ion-list>  
+     </ion-col>
+   </ion-row>
+  </ion-grid>
 </ion-content>

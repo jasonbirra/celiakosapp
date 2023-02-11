@@ -13,18 +13,55 @@
     <ion-row>
       <ion-col sizeMd="4" offsetMd="4">
         <div *ngIf ="character" >
-          <ion-card>
+          <ion-card class="foto-medico">
             <ion-card-content class="ion-text-center">
-              <img  src="http://todo-salud.net/wp-content/uploads/2014/01/medico1.jpg" width="200px"  alt="">
+              
+              <img src="../../assets/img_medicos/{{character.res.imagen_medico}}"   alt="">
+              <ion-item-divider></ion-item-divider>
+              
               <ion-card-title>
-                {{character.res.nombre_medico}}
+                <ion-col size="auto"><ion-icon name="person-circle-outline"></ion-icon></ion-col>
+                <p></p>
+                Dr.(a) {{character.res.nombre_medico}}
               </ion-card-title>
-              <p>{{character.res.mail_medico}}</p>  
-              <p>{{character.res.especialidad_medico}}</p>  
-              <p>{{character.res.lat_medico}}</p> 
-              <p>{{character.res.lng_medico}}</p> 
+              <ion-item-divider></ion-item-divider>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto"><ion-icon name="pulse"></ion-icon></ion-col>
+                  <ion-col size="4">Edad:</ion-col>
+                  <ion-col>{{character.res.edad_medico}} años</ion-col>
+                </ion-row>              
+              
+                <ion-row>
+                  <ion-col size="auto"><ion-icon name="medkit"></ion-icon></ion-col>
+                  <ion-col size="4">Especialidad:</ion-col>
+                  <ion-col>{{character.res.especialidad_medico}}</ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col size="auto"><ion-icon name="call"></ion-icon></ion-col>
+                  <ion-col size="4">Fono:</ion-col>
+                  <ion-col>{{character.res.fono_medico}}</ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col size="auto"><ion-icon name="mail"></ion-icon></ion-col>
+                  <ion-col size="4">Mail:</ion-col>
+                  <ion-col>{{character.res.mail_medico}}</ion-col>
+                </ion-row>
+
+
+              </ion-grid>
+                
+                
+              
+              
               <!--ion-button (click)="mapmedico">Ubicacion Medico</ion-button--> 
-              <ion-button [routerLink]="['../../mapmedico/' + character.res.lat_medico +'/'+ character.res.lng_medico]">Cargar Maps</ion-button>
+              <ion-item-divider></ion-item-divider>
+              <ion-button fill="outline" [routerLink]="['../../mapmedico/' + character.res.lat_medico +'/'+ character.res.lng_medico +'/'+ character.res.nombre_medico]">
+                <ion-icon slot="end" name="earth"></ion-icon>
+                Ubicación en Maps
+              </ion-button>                          
             </ion-card-content>                      
           </ion-card>                             
         </div>

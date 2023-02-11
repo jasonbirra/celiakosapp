@@ -15,7 +15,7 @@
         <div *ngIf ="character" >
           <ion-card>
             <ion-card-content class="ion-text-center">
-              <img  src="https://thumbs.dreamstime.com/b/logotipo-del-chef-s%C3%ADmbolo-de-comida-restaurante-cocina-feliz-194682940.jpg" width="200px"  alt="">
+              <img  src="https://img.freepik.com/vector-premium/sonriente-personaje-dibujos-animados-chef_8250-10.jpg?w=2000" width="200px"  alt="">
               <ion-card-title>
                 {{character.res.nombre_resto}}
               </ion-card-title>
@@ -24,7 +24,10 @@
               <p>{{character.res.descripcion_resto}}</p> 
               <p>Fono: +{{character.res.fono_resto}}</p>  
               <p>Email: {{character.res.mail_resto}}</p>   
-              <ion-button [routerLink]="['../../maplocal/' + character.res.lat_resto +'/'+ character.res.lng_resto]">Cargar Maps</ion-button>                                    
+              <ion-button fill="outline" [routerLink]="['../../maplocal/' + character.res.lat_resto +'/'+ character.res.lng_resto +'/'+ character.res.nombre_resto]">
+                <ion-icon slot="end" name="earth"></ion-icon>
+                Ubicación en Maps
+              </ion-button>                                    
             </ion-card-content>
           </ion-card>
         </div>

@@ -10,23 +10,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>  
+<ion-content> 
+  <ion-card class="medicos-principal">
+    <img  class="imagen" src="..\..\assets\iconos\information.png" />
+    <ion-card-header>      
+      <ion-card-title>¿Quien puede ayudarme..?</ion-card-title>      
+    </ion-card-header>
+    <ion-card-content>
+      Si eres un nuevo Diagnosticado o tienes alguna duda, este es tu lugar....
+    </ion-card-content>
+  </ion-card> 
+  
   <ion-grid>
-   <ion-row>
-     <ion-col sizeMd="4" offsetMd="4">
-       <ion-list>        
-         <ion-item *ngFor="let character of characters" [routerLink]="['../../info/' + character.id]">
-             <ion-avatar class="item-avatar" slot="start">
-               <img class="avatar" src="https://img.freepik.com/vector-premium/linda-ilustracion-medico-dibujos-animados-estilo-handrawn_53734-77.jpg" alt="">
-             </ion-avatar>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <ion-list>      
+         <ion-item  *ngFor="let character of characters" [routerLink]="['../../info/' + character.id]">           
+            <ion-avatar class="item-avatar" slot="start">         
+               <img class="avatar" src="..\..\assets\iconos\info.png" alt=""> 
+            </ion-avatar>            
              <ion-label>
-              <h2>{{character.titulo_info}}</h2>
-              <p>{{character.seccion_info}}</p>
-             </ion-label>             
-           </ion-item>
-         </ion-list>  
-     </ion-col>
-   </ion-row>
-  </ion-grid>
+              <h4>{{character.titulo_info}}</h4>
+              <ion-badge>{{character.seccion_info}}</ion-badge>
+            </ion-label>                                     
+          </ion-item>
+        </ion-list>  
+      </ion-col>
+    </ion-row>
+   </ion-grid>
 </ion-content>
 

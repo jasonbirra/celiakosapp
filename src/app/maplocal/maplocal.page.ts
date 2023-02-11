@@ -54,7 +54,7 @@ export class MaplocalPage implements OnInit {
      
     this.local.position.lat = Number.parseFloat(this.activatedRoute.snapshot.paramMap.get('lat'));
     this.local.position.lng = Number.parseFloat(this.activatedRoute.snapshot.paramMap.get('lng'));
-    this.local.nombre ="DR House";   
+    this.local.nombre =(this.activatedRoute.snapshot.paramMap.get('nombre'));   
     
     
 

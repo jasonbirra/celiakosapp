@@ -16,6 +16,8 @@ export class Tab2Page implements OnInit {
     private http:HttpClient
   ) { }
 
+  
+
   ngOnInit() {
     this.http.get<any>('https://apiceliakos.fly.dev/infos')
     .subscribe(res=>{
