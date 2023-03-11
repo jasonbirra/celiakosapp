@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -13,19 +14,21 @@ export class Tab4Page implements OnInit {
   medicoId: string;  
   characters=[]
 
-  constructor(    
+ 
+  private url= environment.urlprod;
+
+  constructor(      
     private http:HttpClient
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('https://apiceliakos.fly.dev/medicos')
+    this.http.get<any>(this.url+'medicos')
     .subscribe(res=>{
       console.log(res);
-      this.characters=res.medicos.medicos;
-      //this.characters= Object.entries(res.medicos.medicos);
-      
+      this.characters=res.medicos;   //nombre del arreglo mostrado por consola     
     });
      
-  }
+  }  
 
 }
+

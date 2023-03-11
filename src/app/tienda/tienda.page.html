@@ -16,14 +16,14 @@
             <ion-card-content class="ion-text-center">
               <img  src="https://img.freepik.com/vector-gratis/carro-tienda-edificio-tienda-dibujos-animados_138676-2085.jpg?w=2000" width="200px"  alt="">
               <ion-card-title>
-                {{character.res.nombre_tienda}}
+                {{character.local.nombre}}
               </ion-card-title>
-              <p>{{character.res.direccion_tienda}}</p>  
-              <p>{{character.res.ciudad_tienda}}</p>  
-              <p>{{character.res.descripcion_tienda}}</p> 
-              <p>Fono: +{{character.res.fono_tienda}}</p>  
-              <p>Email: {{character.res.mail_tienda}}</p>   
-              <ion-button fill="outline"  [routerLink]="['../../maptienda/' + character.res.lat_tienda +'/'+ character.res.lng_tienda +'/'+ character.res.nombre_tienda]">
+              <p>{{character.local.direccion}}</p>  
+              <p>{{character.local.ciudad}}</p>  
+              <p>{{character.local.descripcion}}</p> 
+              <p>Fono: +{{character.local.fono}}</p>  
+              <p>Email: {{character.local.mail}}</p>   
+              <ion-button fill="outline"  [routerLink]="['../../maptienda/' + character.local.lat +'/'+ character.local.lng +'/'+ character.local.nombre]">
                 <ion-icon slot="end" name="earth"></ion-icon>
                 Ubicación en Maps
               </ion-button>                                    

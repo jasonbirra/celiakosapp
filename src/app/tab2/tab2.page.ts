@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {Router} from '@angular/router'
 import {map} from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tab2',
@@ -12,6 +13,8 @@ export class Tab2Page implements OnInit {
 
   characters=[]
 
+  private url= environment.urlprod;
+
   constructor(
     private http:HttpClient
   ) { }
@@ -19,12 +22,10 @@ export class Tab2Page implements OnInit {
   
 
   ngOnInit() {
-    this.http.get<any>('https://apiceliakos.fly.dev/infos')
+    this.http.get<any>(this.url+'infos')
     .subscribe(res=>{
       console.log(res);
-      this.characters=res.info.informaciones;
-      //this.characters=res.results;
-      //this.characters=res;
+      this.characters=res.infos; //nombre del arreglo mostrado por consola       
     });
   }
 

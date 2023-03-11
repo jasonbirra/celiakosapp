@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-medico',
@@ -12,6 +13,8 @@ export class MedicoPage implements OnInit {
   medicoId: string;
   character  
 
+  private url= environment.urlprod;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,9 +23,13 @@ export class MedicoPage implements OnInit {
 
   ngOnInit() {    
     this.medicoId=this.activatedRoute.snapshot.paramMap.get('id')  
-    this.http.get('https://apiceliakos.fly.dev/medico/' + this.medicoId) 
+    this.http.get(this.url+'medico/'+ this.medicoId) 
     .subscribe(res=> {this.character = res
       console.log(res)});     
   } 
+
+ 
+
+ 
   
 }

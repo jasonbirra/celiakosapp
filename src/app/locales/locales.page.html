@@ -17,14 +17,14 @@
             <ion-card-content class="ion-text-center">
               <img  src="https://img.freepik.com/vector-premium/sonriente-personaje-dibujos-animados-chef_8250-10.jpg?w=2000" width="200px"  alt="">
               <ion-card-title>
-                {{character.res.nombre_resto}}
+                {{character.local.nombre}}
               </ion-card-title>
-              <p>{{character.res.direccion_resto}}</p>  
-              <p>{{character.res.ciudad_resto}}</p>  
-              <p>{{character.res.descripcion_resto}}</p> 
-              <p>Fono: +{{character.res.fono_resto}}</p>  
-              <p>Email: {{character.res.mail_resto}}</p>   
-              <ion-button fill="outline" [routerLink]="['../../maplocal/' + character.res.lat_resto +'/'+ character.res.lng_resto +'/'+ character.res.nombre_resto]">
+              <p>{{character.local.direccion}}</p>  
+              <p>{{character.local.ciudad}}</p>  
+              <p>{{character.local.descripcion}}</p> 
+              <p>Fono: +{{character.local.fono}}</p>  
+              <p>Email: {{character.local.mail}}</p>   
+              <ion-button fill="outline" [routerLink]="['../../maplocal/' + character.local.lat +'/'+ character.local.lng +'/'+ character.local.nombre]">
                 <ion-icon slot="end" name="earth"></ion-icon>
                 Ubicación en Maps
               </ion-button>                                    

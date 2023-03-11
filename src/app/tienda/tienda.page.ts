@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tienda',
@@ -11,6 +12,8 @@ export class TiendaPage implements OnInit {
 
   tiendaId: string;
   character
+
+  private url= environment.urlprod;
  
 
   constructor(
@@ -18,12 +21,12 @@ export class TiendaPage implements OnInit {
     private http: HttpClient
   ) { }
 
+    
   ngOnInit() {    
     this.tiendaId=this.activatedRoute.snapshot.paramMap.get('id')  
-    this.http.get('https://apiceliakos.fly.dev/tienda/' + this.tiendaId) 
-    .subscribe(res=> {this.character = res
-      console.log(res)});       
-  }  
+    this.http.get(this.url+'tienda/'+ this.tiendaId) 
+    .subscribe(res=> {this.character = res});     
+  } 
     
   
 }

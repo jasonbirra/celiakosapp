@@ -16,38 +16,38 @@
           <ion-card class="foto-medico">
             <ion-card-content class="ion-text-center">
               
-              <img src="../../assets/img_medicos/{{character.res.imagen_medico}}"   alt="">
+              <img src="../../assets/img_medicos/{{character.medico.imagen_medico}}"   alt="">
               <ion-item-divider></ion-item-divider>
               
               <ion-card-title>
                 <ion-col size="auto"><ion-icon name="person-circle-outline"></ion-icon></ion-col>
                 <p></p>
-                Dr.(a) {{character.res.nombre_medico}}
+                Dr.(a) {{character.medico.nombre_medico}}
               </ion-card-title>
               <ion-item-divider></ion-item-divider>
               <ion-grid>
                 <ion-row>
                   <ion-col size="auto"><ion-icon name="pulse"></ion-icon></ion-col>
                   <ion-col size="4">Edad:</ion-col>
-                  <ion-col>{{character.res.edad_medico}} años</ion-col>
+                  <ion-col>{{character.medico.edad_medico}} años</ion-col>
                 </ion-row>              
               
                 <ion-row>
                   <ion-col size="auto"><ion-icon name="medkit"></ion-icon></ion-col>
                   <ion-col size="4">Especialidad:</ion-col>
-                  <ion-col>{{character.res.especialidad_medico}}</ion-col>
+                  <ion-col>{{character.medico.especialidad_medico}}</ion-col>
                 </ion-row>
 
                 <ion-row>
                   <ion-col size="auto"><ion-icon name="call"></ion-icon></ion-col>
                   <ion-col size="4">Fono:</ion-col>
-                  <ion-col>{{character.res.fono_medico}}</ion-col>
+                  <ion-col>{{character.medico.fono_medico}}</ion-col>
                 </ion-row>
 
                 <ion-row>
                   <ion-col size="auto"><ion-icon name="mail"></ion-icon></ion-col>
                   <ion-col size="4">Mail:</ion-col>
-                  <ion-col>{{character.res.mail_medico}}</ion-col>
+                  <ion-col>{{character.medico.mail_medico}}</ion-col>
                 </ion-row>
 
 
@@ -58,7 +58,7 @@
               
               <!--ion-button (click)="mapmedico">Ubicacion Medico</ion-button--> 
               <ion-item-divider></ion-item-divider>
-              <ion-button fill="outline" [routerLink]="['../../mapmedico/' + character.res.lat_medico +'/'+ character.res.lng_medico +'/'+ character.res.nombre_medico]">
+              <ion-button fill="outline" [routerLink]="['../../mapmedico/' + character.medico.lat_medico +'/'+ character.medico.lng_medico +'/'+ character.medico.nombre_medico]">
                 <ion-icon slot="end" name="earth"></ion-icon>
                 Ubicación en Maps
               </ion-button>                          

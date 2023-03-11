@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -12,6 +13,8 @@ export class LocalesPage implements OnInit {
 
   localId: string;
   character
+
+  private url= environment.urlprod;
  
 
   constructor(
@@ -21,7 +24,7 @@ export class LocalesPage implements OnInit {
 
   ngOnInit() {    
     this.localId=this.activatedRoute.snapshot.paramMap.get('id')  
-    this.http.get('https://apiceliakos.fly.dev/restaurant/' + this.localId) 
+    this.http.get(this.url+'restaurant/'+ this.localId) 
     .subscribe(res=> {this.character = res
       console.log(res)});       
   }  

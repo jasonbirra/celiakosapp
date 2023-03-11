@@ -19,7 +19,8 @@ export class Tab1Page {
     centeredSlides: true,
     loop: true,
     spaceBetween: 10,
-    //autoPlay: true,
+    autoPlay: {
+      delay:4000}
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -12,18 +13,21 @@ export class Tab3Page {
   localId: string;  
   characters=[]
 
+  
+  
+  private url= environment.urlprod;
+
   constructor(
     private http:HttpClient
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('https://apiceliakos.fly.dev/restaurantes')
+    this.http.get<any>(this.url+'restaurantes')
     .subscribe(res=>{
       console.log(res);
-      //this.characters=res.results;
-      this.characters=res.resto.restos;
-      //this.characters=res;
+      this.characters=res.locales;  //nombre del arreglo mostrado por consola     
     });
+    
      
   }  
 
