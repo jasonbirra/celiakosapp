@@ -15,9 +15,9 @@
         <div *ngIf ="character" >
           <ion-card>
             <ion-card-content class="ion-text-center">
-              <img  src="https://img.freepik.com/vector-premium/sonriente-personaje-dibujos-animados-chef_8250-10.jpg?w=2000" width="200px"  alt="">
+              <img class="imagen" src="../../assets/img_tiendas/{{character.local.imagen}}" width="200px"  alt="">
               <ion-card-title>
-                {{character.local.nombre}}
+                {{character.local.nombre}}                
               </ion-card-title>
               <p>{{character.local.direccion}}</p>  
               <p>{{character.local.ciudad}}</p>  
